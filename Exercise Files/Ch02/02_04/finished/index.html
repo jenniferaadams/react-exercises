@@ -24,7 +24,12 @@
           console.log(props);
           return(
             <section>
-          <ul>
+              <img 
+              height={200}
+              alt="A server presents two plates"
+              src="./pexels-pixabay-262978.jpg"/>
+              
+              <ul>
             {props.dishes.map((dish) => (
               <li key={dish.id}>{dish.title}
                 </li>
@@ -57,11 +62,11 @@
 
         function App(){
           return (
-            <div>
+            <React.Fragment>
               <Header name="Jenn" />
               <Main adj="amazing" dishes={dishObjects} />
               <Footer year={new Date().getFullYear()} />
-              </div>
+              </React.Fragment>
           ); 
         }
 
